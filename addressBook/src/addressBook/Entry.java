@@ -1,5 +1,5 @@
 package addressBook;
-
+//
 public class Entry {
 	 String firstName;
 	 String lastName;
