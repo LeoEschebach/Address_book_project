@@ -3,14 +3,15 @@ import java.util.*;
 public class Main {
 	
 	public static void main(String[] args) {
-		
-		parseEntry(getEntry());
-		
+		Record addressBook = new Record();
+		while(true) {
+			parseEntry(getEntry(), addressBook);
+		}
 		
 	}
 	private static int getEntry() {
 		Scanner input = new Scanner(System.in);
-		System.out.println("What would you like to do? \n"
+		System.out.println("Please choose what you'd like to do with the database \n"
 				+ "Enter: \r\n"
 				+ "1 to add an entry \r\n"
 				+ "2 to remove and entry\r\n"
@@ -21,18 +22,32 @@ public class Main {
 		int choice = input.nextInt();
 		return choice;
 	}
-	private static void parseEntry(int choice) {
+	private static void parseEntry(int choice, Record addressBook) {
 		// based off option, you would break into specific addresBook method
 		// addressBook.method();
-		while(true) {
 			if(choice == 1) {
-				newEntry();
+				addressBook.newEntry();
 			}
 			else if(choice == 2) {
-				
+				addressBook.deleteEntry();
+			}
+			else if(choice == 3) {
+				addressBook.findEntry();
+			}
+			else if(choice == 4) {
+				addressBook.printAddressBook();
+			}
+			else if(choice == 5) {
+				addressBook.deleteContents();
+			}
+			else if(choice == 6) {
+				addressBook.quit();
+			}
+			else {
+				System.out.println("Invalid input, please try again.");
 			}
 			
-		}
+		
 		
 	}
 
