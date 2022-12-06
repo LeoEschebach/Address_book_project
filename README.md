@@ -1,10 +1,10 @@
 # Address_Book_Project
 
-Instructions:
+## Instructions:
 
 In this project, you will be creating an address book that can store information about people.
 
-## Overall Goals
+### Overall Goals
 The application should be able to do the following:
 
  - Present the user with a list of options to interact with the database and take in their input
